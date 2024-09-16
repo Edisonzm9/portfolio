@@ -1,21 +1,20 @@
 /* Estilo para el contenedor del header */
 .header-container {
-    /* Eliminamos la altura fija */
-    /* height: 30px; */
     padding: 16px 20px;  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;  
     border-radius: 12px;  
     display: flex;
     align-items: center;  
-    justify-content: space-between;  
+    justify-content: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Necesario para posicionar el logo absolutamente */
 }
 
 /* Estilo para el contenedor del logo */
 .logo-container {
+    position: absolute;
+    left: 20px; /* Ajusta este valor si necesitas más o menos espacio desde la izquierda */
     display: flex;
     align-items: center;
-    padding-right: 20px;
 }
 
 /* Estilo para la imagen del logo */
@@ -28,51 +27,79 @@
     border-radius: 8px;  
 }
 
+/* Estilo para el contenedor de navegación */
+.nav-container {
+    display: flex;
+    justify-content: center; /* Centra los enlaces de navegación */
+}
+
 /* Estilo para la lista de navegación */
 .nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* Centra los elementos dentro del contenedor */
-    flex-wrap: wrap;  /* Permite que los elementos se ajusten en varias filas si hay muchos */
+    justify-content: center;  
+    flex-wrap: wrap;  
 }
 
 /* Estilo para los elementos de la lista de navegación */
 .nav-item {
     margin-right: 20px;
-    margin-bottom: 3px;  /* Añade margen inferior para que al agregar más enlaces, no se vean demasiado juntos */
+    margin-bottom: 3px;  
 }
 
 .nav-item:last-child {
-    margin-right: 0;  /* Elimina el margen derecho del último elemento */
+    margin-right: 0;  
 }
 
 /* Estilo para los enlaces de la navegación */
 .nav-link {
     text-decoration: none;
     color: black;
-    font-size: 24px;  /* Letras más grandes */
+    font-size: 24px;  
     font-weight: bold;
     padding: 10px 15px;
-    border-radius: 12px;  /* Bordes redondeados en los botones */
-    transition: all 0.3s ease;  /* Efecto de transición */
+    border-radius: 12px;  
+    transition: all 0.3s ease;  
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(0px);  /* Inicialmente, sin blur */
+    backdrop-filter: blur(0px);  
 }
 
 /* Efectos al pasar el ratón sobre los enlaces */
 .nav-link:hover {
-    background-color: rgba(255, 99, 71, 0.7); /* Color de fondo tomate con transparencia */
+    background-color: rgba(255, 99, 71, 0.7); 
     color: white;
-    transform: scale(1.1);  /* Agranda el enlace un poco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra en el hover */
-    backdrop-filter: blur(5px);  /* Efecto de desenfoque en hover */
+    transform: scale(1.1);  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  
+    backdrop-filter: blur(5px);  
+}
+/* Estilo para el contenedor de los íconos sociales */
+.social-icons-container {
+    position: absolute;
+    right: 50px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    align-items: center;
 }
 
+/* Estilo para los íconos sociales usando Font Awesome */
+.social-icon {
+    font-size: 30px; /* Ajusta el tamaño de los íconos según tus preferencias */
+    color: black; /* Color del icono */
+    margin-left: 25px; /* Espacio entre los íconos */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efecto al pasar el ratón */
+    color: #ff6347; /* Cambia el color al pasar el ratón (opcional) */
+}
 /* Responsive: Ajusta el tamaño del texto para pantallas pequeñas */
 @media (max-width: 768px) {
-    .nav-link {
-      font-size: 20px;  /* Tamaño de fuente más pequeño en dispositivos móviles */
+    .social-icon {
+        font-size: 25px;
     }
+    .nav-link {
+      font-size: 20px;  
+    }   
 }
