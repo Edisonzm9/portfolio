@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css';  // Importa el archivo CSS
+import logoW from '../assets/images/logoW.png';
 
 function Header() {
   return (
-    <header style={{ backgroundColor: '#f0f0f0', padding: '10px 20px' }}>
+    <header className="header-container">
+
+      <div className="logo-container">
+        <img src={logoW} alt="Logo" className="logo" />
+      </div>
       <nav>
-        <ul style={{ listStyleType: 'none', margin: 0, padding: 0 }}>
-          <li style={{ display: 'inline', marginRight: '10px' }}>
-            <Link to="/">Home</Link>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/about" className="nav-link">About me</Link>
           </li>
-          <li style={{ display: 'inline', marginRight: '10px' }}>
-            <Link to="/about">About</Link>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Projects</Link>
           </li>
+
         </ul>
       </nav>
     </header>
