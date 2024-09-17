@@ -15,7 +15,7 @@ const AboutMe = () => {
           className="photo-container"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2 }}
         >
           <img src={foto} alt="Foto" className="profile-photo" />
         </motion.div>
@@ -23,7 +23,7 @@ const AboutMe = () => {
           className="text-container"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2 }}
         >
           <h1>About me...</h1>
           <p>Software engineer graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development. 
@@ -39,7 +39,7 @@ const AboutMe = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2 }}
         >
           My Title and Certifications
         </motion.h2>
@@ -47,7 +47,7 @@ const AboutMe = () => {
           className="certificates-container"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2 }}
         >
           <div className="certificate-item">
           <p>Ingeniero en Software - Universidad Técnica del Norte</p>
