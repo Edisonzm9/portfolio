@@ -5,6 +5,9 @@ import foto from '../../assets/images/foto.png';
 import c1 from '../../assets/images/c1.png';
 import c2 from '../../assets/images/c2.png';
 import c3 from '../../assets/images/c3.png';
+import c4 from '../../assets/images/c4.png';
+// Importación del carrusel de react-bootstrap
+import Carousel from 'react-bootstrap/Carousel';
 
 const AboutMe = () => {
   return (
@@ -43,28 +46,37 @@ const AboutMe = () => {
         >
           My Title and Certifications
         </motion.h2>
-        <motion.div
-          className="certificates-container"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
-        >
-          <div className="certificate-item">
-          <p>Ingeniero en Software - Universidad Técnica del Norte</p>
-            <img src={c1} alt="Certificado 1" className="certificate-image" />
-            <p></p>
-          </div>
-          <div className="certificate-item">
-          <p>Business Model Canvas Essentials - CertiProf</p>
-            <img src={c2} alt="Certificado 2" className="certificate-image" />
-            <p></p>
-          </div>
-          <div className="certificate-item">
-          <p>Introduction to Cybersecurity - CISCO</p>
-            <img src={c3} alt="Certificado 3" className="certificate-image" />
-            <p></p>
-          </div>
-        </motion.div>
+
+        {/* Carrusel de Certificados */}
+        <div className="carousel-container">
+          <Carousel fade interval={3000}>
+            <Carousel.Item>
+              <div className="carousel-slide">
+                <p>Ingeniero en Software - Universidad Técnica del Norte</p>
+                <img src={c1} alt="Certificado 1" className="certificate-image" />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="carousel-slide">
+                <p>Business Model Canvas Essentials - CertiProf</p>
+                <img src={c2} alt="Certificado 2" className="certificate-image" />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="carousel-slide">
+                <p>Introduction to Cybersecurity - CISCO</p>
+                <img src={c3} alt="Certificado 3" className="certificate-image" />
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="carousel-slide">
+                <p>English Proficiency B1 - LAUEMPRENDE EP</p>
+                <img src={c4} alt="Certificado 4" className="certificate-image" />
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
       </div>
     </div>
   );

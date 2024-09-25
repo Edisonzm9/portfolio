@@ -1,86 +1,135 @@
-/* Contenedor principal que envuelve todo y aplica el color de fondo */
 .about-page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    background-color: #f9f9f9; /* Fondo común */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilo general del contenedor */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  margin-bottom: 20px;
+}
+
+.photo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo {
+  max-width: 80%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Estilos para la sección de certificados */
+.certificates-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.carousel-container {
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.certificate-image {
+  width: 600px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* --- Responsivo --- */
+
+/* Para pantallas de tamaño mediano y pequeño */
+@media (max-width: 1024px) {
   .about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10%;
+    flex-direction: column;
+    height: auto; /* Ajustar la altura */
+    padding: 0 5%; /* Reducir el padding */
   }
-  
-  .photo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
   .profile-photo {
-    max-width: 80%;
-    border-radius: 50%;
-    object-fit: cover;
+    max-width: 60%; /* Reducir el tamaño de la foto */
   }
-  
+
   .text-container {
-    flex: 1;
-    padding-left: 20px;
+    padding-left: 0; /* Elimina el espacio lateral en pantallas más pequeñas */
+    text-align: center; /* Centrar el texto */
   }
-  
+
   h1 {
-    font-size: 3rem;
-    color: #333;
+    font-size: 2.5rem; /* Reducir el tamaño del título */
   }
-  
+
   p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.1rem; /* Reducir el tamaño del texto */
   }
-  
-  /* Sección de título */
-  .title-section {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Grid de los certificados */
-  .certificates-container {
-    text-align: center;
-    width: 100%;
-    background-color: inherit; /* Hereda el fondo común */
-  }
-  
-  .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para 2 certificados por fila */
-    gap: 20px;
-    justify-items: center; /* Centra los elementos dentro de cada celda */
-    margin-top: 20px;
-  }
-  
-  .certificate-item {
-    text-align: center;
-  }
-  
-  .certificate-image {
-    width: 300px; /* Aumento del tamaño de las imágenes */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
     height: auto;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 5%; /* Reducir el padding */
   }
-  
+
+  .profile-photo {
+    max-width: 80%; /* Ajustar el tamaño de la foto en móviles */
+  }
+
+  .text-container {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem; /* Ajustar el tamaño del título */
+  }
+
+  p {
+    font-size: 1rem; /* Reducir el tamaño del texto */
+  }
+
+  /* Estilo para el carrusel en pantallas pequeñas */
+  .carousel-container {
+    height: auto;
+  }
+
+  .certificate-image {
+    width: 90%; /* Hacer que las imágenes ocupen el 90% del ancho disponible en móviles */
+    margin-top: 10px; /* Reducir el espacio superior */
+  }
+}
