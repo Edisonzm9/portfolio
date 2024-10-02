@@ -1,20 +1,27 @@
 import React from 'react';
 import './Projects.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+
 
 
 const Projects = () => {
     return (
-
-
-        <p>Software engineer graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development.
-            Focused on creating efficient and scalable solutions using technologies such as Angular, React, relational and non-relational
-            databases, and Python. Currently deepening knowledge in React and exploring data science. Passionate about problem-solving
-            and building products that positively impact users. Learning new tools and collaborating in multidisciplinary teams are key
-            motivations.</p>
-
-
-
-
+        <div className='cards'>
+            <div>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Web Page - Reparauto Ibarra</Card.Title>
+                        <Card.Text>
+                            In this project I build a web page to Reparauto Ibarra. This web page contain information about process
+                        </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+        </div>
     );
 };
 

@@ -1,120 +1,142 @@
 /* Estilo para el contenedor del header */
 .header-container {
-    padding: 16px 20px;  
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;  
-    display: flex;
-    align-items: center;  
-    justify-content: space-between; /* Distribuye espacio entre logo, navegación e íconos sociales */
-    position: relative;
-    background-color: #fff;
-  }
-  
-  /* Estilo para el contenedor del logo */
-  .logo-container {
-    display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 20px;
+  z-index: 1000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Estilo para el contenedor de navegación */
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 99, 71, 0.7);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el contenedor de los íconos sociales */
+.social-icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  font-size: 30px;
+  color: black;
+  margin-left: 25px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #ff6347;
+}
+
+/* Ícono de menú hamburguesa (solo en móviles) */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive: Cambios en dispositivos móviles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
     align-items: center;
   }
-  
-  /* Estilo para la imagen del logo */
-  .logo {
-    max-height: 50px; /* Ajusta este valor según el tamaño deseado */
-    height: auto;
-    width: auto;
-    padding: 5px;      
-    object-fit: contain; 
-    border-radius: 8px;  
-  }
-  
-  /* Estilo para el contenedor de navegación */
+
   .nav-container {
-    display: flex;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
-  
-  /* Estilo para la lista de navegación */
+
+  .nav-container.open {
+    display: flex;
+  }
+
   .nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Estilo para los elementos de la lista de navegación */
+
   .nav-item {
-    margin-right: 20px;
-    margin-bottom: 3px;  
+    margin-bottom: 15px;
   }
-  
-  .nav-item:last-child {
-    margin-right: 0;
-  }
-  
-  /* Estilo para los enlaces de la navegación */
+
   .nav-link {
-    text-decoration: none;
-    color: black;
-    font-size: 24px;  
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(0px);
+    font-size: 20px;
   }
-  
-  /* Efectos al pasar el ratón sobre los enlaces */
-  .nav-link:hover {
-    background-color: rgba(255, 99, 71, 0.7); 
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-  }
-  
-  /* Estilo para el contenedor de los íconos sociales */
+
+  /* Hacer visibles los íconos sociales en móviles */
   .social-icons-container {
     display: flex;
-    align-items: center;
+    margin-top: 10px; /* Añadir un poco de espacio por encima en móviles */
   }
-  
-  /* Estilo para los íconos sociales usando Font Awesome */
+
   .social-icon {
-    font-size: 30px; /* Ajusta el tamaño de los íconos según tus preferencias */
-    color: black; /* Color del icono */
-    margin-left: 25px; /* Espacio entre los íconos */
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 25px;
   }
-  
-  .social-icon:hover {
-    transform: scale(1.2); /* Efecto al pasar el ratón */
-    color: #ff6347; /* Cambia el color al pasar el ratón */
+
+  .menu-icon {
+    display: block;
   }
-  
-  /* Responsive: Ajusta el tamaño del texto para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-list {
-      flex-direction: column;
-    }
-  
-    .nav-item {
-      margin-bottom: 10px;
-      margin-right: 0;
-    }
-  
-    .nav-link {
-      font-size: 20px;  
-    }
-  
-    .social-icon {
-      font-size: 25px;
-    }
-  }
-  
+}

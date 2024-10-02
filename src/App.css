@@ -1,4 +1,36 @@
-
 body {
   font-family: "Century Gothic", Arial, sans-serif;
+}
+
+/* Estilo para el header que siempre esté visible y fijo */
+.header-container {
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el header esté siempre por encima de otros elementos */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px 20px;
+}
+
+/* Ajusta el contenido debajo del header */
+.content {
+  margin-top: 80px; /* Ajusta el margen para no superponer el header */
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    padding-top: 90px; /* Ajusta el margen superior en móviles */
+    margin: 0;
+  }
+
+  .header-container {
+    padding: 10px 15px;
+  }
+
+  .content {
+    margin-top: 60px; /* Espacio en móviles para el header */
+  }
 }

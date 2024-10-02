@@ -19,7 +19,7 @@ const AboutMe = () => {
       {/* Sección About Me */}
       <div className="about-container">
         <motion.div
-          className="photo-container"
+          className="photo-container circle-animation"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2 }}
@@ -97,9 +97,9 @@ const AboutMe = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: '#f9f9f9', color: '#333' }}
-            contentArrowStyle={{ borderRight: '7px solid #3498db' }} // Flecha azul
+            contentArrowStyle={{ borderRight: '7px solid #e67e22' }} // Flecha azul
             date="2024 - Present"
-            iconStyle={{ background: '#3498db', color: '#fff' }} // Fondo azul, icono blanco
+            iconStyle={{ background: '#e67e22', color: '#fff' }} // Fondo azul, icono blanco
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Developer - Reparauto Ibarra</h3>
