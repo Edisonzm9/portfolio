@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Edisonzm9/portfolio.git/static/css/main.ad3038d9.css",
+    "main.js": "/Edisonzm9/portfolio.git/static/js/main.9c1d7597.js",
+    "static/js/453.211be4f6.chunk.js": "/Edisonzm9/portfolio.git/static/js/453.211be4f6.chunk.js",
+    "static/media/c1.png": "/Edisonzm9/portfolio.git/static/media/c1.dea1ac649a49e241f22d.png",
+    "static/media/foto.png": "/Edisonzm9/portfolio.git/static/media/foto.a2f53811331be0d79d71.png",
+    "static/media/c2.png": "/Edisonzm9/portfolio.git/static/media/c2.9fdee6f20fc70f40751e.png",
+    "static/media/c4.png": "/Edisonzm9/portfolio.git/static/media/c4.42185019972dc3d481b7.png",
+    "static/media/p1.png": "/Edisonzm9/portfolio.git/static/media/p1.bc7c5cba6836dd19ed73.png",
+    "static/media/c3.png": "/Edisonzm9/portfolio.git/static/media/c3.c76e34124dad3d1d144b.png",
+    "static/media/logoW.png": "/Edisonzm9/portfolio.git/static/media/logoW.5374b514fed211053753.png",
+    "index.html": "/Edisonzm9/portfolio.git/index.html",
+    "main.ad3038d9.css.map": "/Edisonzm9/portfolio.git/static/css/main.ad3038d9.css.map",
+    "main.9c1d7597.js.map": "/Edisonzm9/portfolio.git/static/js/main.9c1d7597.js.map",
+    "453.211be4f6.chunk.js.map": "/Edisonzm9/portfolio.git/static/js/453.211be4f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad3038d9.css",
+    "static/js/main.9c1d7597.js"
+  ]
+}
