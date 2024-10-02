@@ -1,0 +1,33 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 1200px; /* O el ancho máximo que prefieras */
+    border: 1px solid #ddd; /* Borde de la card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efecto de sombra */
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto hover para hacer más notable la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 300px; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+}
+.btn-primary {
+    background-color: rgba(255, 99, 71, 0.7);
+    border-color:rgba(255, 255, 255, 0.7);
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
