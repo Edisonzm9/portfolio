@@ -28,9 +28,9 @@ function App() {
       <div className={`content ${scrolled ? 'scrolled' : ''}`}>
         <Routes>
           {/* Definición de rutas */}
-          <Route path="/" element={<Navigate replace to="/about" />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Navigate replace to="#/about" />} />
+          <Route path="#/about" element={<About />} />
+          <Route path="#/projects" element={<Projects />} />
 
           {/* Manejo de rutas no encontradas (404) */}
           <Route path="*" element={<Navigate to="/home" replace />} />
