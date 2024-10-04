@@ -32,10 +32,10 @@ function App() {
       <Header />
       <div className={`content ${scrolled ? 'scrolled' : ''}`}>
         <Routes>
-          <Route path="/" element={<Navigate replace to="/about" />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Navigate to="/" replace />} /> {/* Manejo de rutas no encontradas */}
         </Routes>
       </div>
     </Router>
