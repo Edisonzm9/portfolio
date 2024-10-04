@@ -111,6 +111,23 @@ const AboutMe = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: '#f9f9f9', color: '#333' }}
+            contentArrowStyle={{ borderRight: '7px solid #2ecc71' }} // Flecha verde
+            date="Apr 2023 - Aug 2023"
+            iconStyle={{ background: '#2ecc71', color: '#fff' }} // Fondo verde
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Backend Developer - Municipio de Ibarra</h3>
+            <p>
+              Developed the backend, optimizing communication between modules and automating administrative and operational processes.
+              Improved the database, enhancing traceability, transparency, and efficiency in the management of infractions and penalties.
+            </p>
+          </VerticalTimelineElement>
+
+
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: '#f9f9f9', color: '#333' }}
             contentArrowStyle={{ borderRight: '7px solid #e74c3c' }} // Flecha roja
             date="2022"
             iconStyle={{ background: '#e74c3c', color: '#fff' }} // Fondo rojo
