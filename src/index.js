@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';  // Opcional, para estilos globales
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';  // Importar BrowserRouter
+import { HashRouter } from 'react-router-dom';  // Cambiar a HashRouter
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* Envolver la aplicación con BrowserRouter */}
-    <BrowserRouter>
+    <HashRouter>  {/* Usar HashRouter */}
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
