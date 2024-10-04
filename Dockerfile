@@ -22,6 +22,8 @@ FROM nginx:alpine
 # Copiar los archivos construidos al directorio de NGINX
 COPY --from=build /app/build /usr/share/nginx/html
 
+
+
 # Exponer el puerto 80
 EXPOSE 80
 
