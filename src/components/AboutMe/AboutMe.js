@@ -33,11 +33,7 @@ const AboutMe = () => {
           transition={{ duration: 2 }}
         >
           <h1>About me...</h1>
-          <p>Software engineer graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development.
-            Focused on creating efficient and scalable solutions using technologies such as Angular, React, relational and non-relational
-            databases, and Python. Currently deepening knowledge in React and exploring data science. Passionate about problem-solving
-            and building products that positively impact users. Learning new tools and collaborating in multidisciplinary teams are key
-            motivations.</p>
+          <p>Software engineer graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development. Focused on creating efficient and scalable solutions using technologies such as Angular, React, Python, and relational and non-relational databases. Currently deepening knowledge in React and exploring data science. Passionate about problem-solving and building products that positively impact users. Motivated by learning new tools and collaborating in multidisciplinary teams.</p>
         </motion.div>
       </div>
 
