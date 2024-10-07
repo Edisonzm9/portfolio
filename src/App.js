@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';  // Usas Bootstrap en tu proyecto
 import { Routes, Route, Navigate } from 'react-router-dom';  // Importar enrutador
-import Home from './pages/home';
 import About from './components/AboutMe/AboutMe';
 import Header from './components/Header/Header';
 import Projects from './components/Projects/Projects.js';
@@ -33,7 +32,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
 
           {/* Manejo de rutas no encontradas (404) */}
-          <Route path="*" element={<Navigate to="/home" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </>

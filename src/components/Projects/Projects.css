@@ -1,12 +1,13 @@
 .cards {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Organiza las cards en una sola columna */
+    align-items: center; /* Alinea las cards en el centro */
     padding: 20px;
 }
 
 .card {
     width: 100%;
-    max-width: 1200px; /* O el ancho máximo que prefieras */
+    max-width: 1200px; /* Mantén el ancho máximo que prefieres */
     border: 1px solid #ddd; /* Borde de la card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efecto de sombra */
     margin-bottom: 20px;
@@ -14,7 +15,7 @@
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efecto hover para hacer más notable la card */
+    transform: scale(1.05); /* Efecto hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
