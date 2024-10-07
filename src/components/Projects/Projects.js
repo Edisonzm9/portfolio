@@ -3,7 +3,6 @@ import './Projects.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import p1 from '../../assets/images/p1.png';
-import videoReparauto from '../../assets/videos/videoReparauto.mp4'; // Asegúrate de colocar el video en la carpeta adecuada
 
 const Projects = () => {
     return (
@@ -24,22 +23,21 @@ const Projects = () => {
                 </Card.Body>
             </Card>
 
-            {/* Segundo proyecto con video */}
+            {/* Segundo proyecto con iframe para el video */}
             <Card className='card'>
-                <video className="card-img-top" controls>
-                    <source src={videoReparauto} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <iframe
+                    className="card-img-top"
+                    src="https://drive.google.com/file/d/1qdcoqUIp5TyZ493Ubb8j0dWTnaJPv8-b/preview"
+                    width="100%"
+                    height="300"
+                    title="Reparauto Ibarra Project Overview Video"
+                    allow="autoplay"
+                ></iframe>
                 <Card.Body>
-                    <Card.Title>Web Page - Reparauto Ibarra (Video Overview)</Card.Title>
+                    <Card.Title>Development of the ERP under construction for Reparauto Ibarra</Card.Title>
                     <Card.Text>
-                        This is a video overview of the web page I built for Reparauto Ibarra, showcasing the main features and design. Developed using Angular.js and deployed on Firebase.
-                    </Card.Text>
-                    <div className="d-flex justify-content-end">
-                        <a href="https://reparauto-ibarra.web.app/" target="_blank" rel="noopener noreferrer">
-                            <Button variant="primary">Go to project</Button>
-                        </a>
-                    </div>
+                    It includes modules for vehicle reception, inventory management, and internal process control. Built with AngularJS for the frontend, Node.js for the backend, PostgreSQL as the database, and Docker for container management.                   </Card.Text>
+  
                 </Card.Body>
             </Card>
         </div>
