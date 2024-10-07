@@ -43,12 +43,12 @@ import tsImg from '../../assets/images/ts.png';
 
 
 const skillsData = [
-  { category: 'Programming Languages', items: ['HTML', 'CSS', 'JavaScript','TypeScript', 'Python', 'Java', 'PHP', 'C#'], images: [htmlImg, cssImg, jsImg,tsImg, pythonImg, javaImg,phpImg,cImg] },
+  { category: 'Programming Languages', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Python', 'Java', 'PHP', 'C#'], images: [htmlImg, cssImg, jsImg, tsImg, pythonImg, javaImg, phpImg, cImg] },
   { category: 'Frameworks and Libraries', items: ['React', 'Angular', 'Bootstrap'], images: [reactImg, angularImg, bootstrapImg] },
-  { category: 'Mobile App Development', items: ['Android Studio', 'Flutter', 'Ionic','B4A'], images: [androidImg, flutterImg, ionicImg, b4aImg] }, // Aquí puedes agregar las imágenes correspondientes
+  { category: 'Mobile App Development', items: ['Android Studio', 'Flutter', 'Ionic', 'B4A'], images: [androidImg, flutterImg, ionicImg, b4aImg] }, // Aquí puedes agregar las imágenes correspondientes
   { category: 'Backend and Full-Stack', items: ['Node.js', 'Web Scraping'], images: [nodeImg, webImg] }, // Reemplaza las imágenes con las correctas
   { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'MySQL'], images: [psqlImg, mongoImg, mysqlImg] }, // Reemplaza las imágenes con las correctas
-  { category: 'CI/CD', items: ['Docker', 'Kubernetes', 'Git','GitHub'], images: [dockerImg, kuberImg, gitImg, gitHubImg] }, // Reemplaza las imágenes con las correctas
+  { category: 'CI/CD', items: ['Docker', 'Kubernetes', 'Git', 'GitHub'], images: [dockerImg, kuberImg, gitImg, gitHubImg] }, // Reemplaza las imágenes con las correctas
 ];
 
 const AboutMe = () => {
@@ -72,11 +72,9 @@ const AboutMe = () => {
         >
           <h1>About me...</h1>
           <p>
-            Software engineer graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development.
-            Focused on creating efficient and scalable solutions using technologies such as Angular, React, Python, and relational and
-            non-relational databases. Currently deepening knowledge in React and exploring data science. Passionate about problem-solving
-            and building products that positively impact users. Motivated by learning new tools and collaborating in multidisciplinary teams.
+            Hi :D! My name is Edison Zamora, a Software Engineer from Ibarra, Ecuador. I graduated from the Universidad Técnica del Norte, specializing in web, mobile, and desktop development. I focus on creating efficient and scalable solutions using technologies such as Angular, React, Python, and both relational and non-relational databases. Currently, I am deepening my knowledge in React and exploring data science. I am passionate about problem-solving and building products that make a positive impact on users, always motivated by learning new tools and collaborating with multidisciplinary teams.
           </p>
+
         </motion.div>
       </div>
 
@@ -141,7 +139,7 @@ const AboutMe = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: '#f9f9f9', color: '#333' }}
-            contentArrowStyle={{ borderRight: '7px solid #2ecc71' }}
+            contentArrowStyle={{ borderRight: '7px solid #2ecc71' }}  // Flecha verde
             date="Apr 2023 - Aug 2023"
             iconStyle={{ background: '#2ecc71', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -152,6 +150,8 @@ const AboutMe = () => {
               Improved the database, enhancing traceability, transparency, and efficiency in the management of infractions and penalties.
             </p>
           </VerticalTimelineElement>
+
+
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

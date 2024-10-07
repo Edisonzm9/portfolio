@@ -64,8 +64,22 @@ p {
 }
 
 /* Estilo para la sección de experiencia */
+
+/* Estilos para las tarjetas de experiencia profesional */
+.vertical-timeline-element-content {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: scale(1.10); /* Escala la tarjeta al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para resaltar */
+  z-index: 3; /* Asegura que sobresalga sobre otras tarjetas */
+}
+
+/* Estilos del segundo timeline - borde derecho verde y flecha izquierda verde */
 .vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-content {
-  border-left: 7px solid #2ecc71; /* Borde verde */
+  border-right: 7px solid #2ecc71; /* Borde verde a la derecha */
 }
 
 .vertical-timeline-element--work:nth-child(2) h3 {
@@ -74,6 +88,11 @@ p {
 
 .vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-icon {
   background-color: #2ecc71; /* Fondo de ícono en verde */
+}
+
+/* Flecha verde del segundo timeline - en la parte izquierda de la tarjeta */
+.vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-content::before {
+  border-left: 7px solid #2ecc71; /* Flecha verde en la izquierda */
 }
 
 .vertical-timeline-element--work:nth-child(3) .vertical-timeline-element-content {
@@ -87,6 +106,7 @@ p {
 .vertical-timeline-element--work:nth-child(3) .vertical-timeline-element-icon {
   background-color: #e74c3c; /* Fondo de ícono en rojo */
 }
+
 .experience-section {
   margin-top: 40px;
   width: 100%;
@@ -152,8 +172,6 @@ p {
   z-index: 3; /* Aumenta el z-index para asegurar que sobresalga de las demás tarjetas */
 }
 
-
-
 .skill-card h3 {
   font-size: 1.5rem;
   color: #333;
@@ -170,13 +188,13 @@ p {
   color: #666;
   margin-bottom: 10px;
 }
+
 .skill-image {
   width: 40px; /* Ajusta el tamaño aquí según tus preferencias */
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
 }
-
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -212,5 +230,4 @@ p {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-
 }
