@@ -6,36 +6,6 @@
   background-color: #f9f9f9;
 }
 
-@keyframes circle-out-top-right {
-  from {
-    clip-path: circle(125%);
-  }
-  to {
-    clip-path: circle(0% at top right);
-  }
-}
-
-@keyframes circle-in-center {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(125%);
-  }
-}
-
-[transition-style="in:circle:center"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
-}
-
-[transition-style="out:circle:top-right"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-top-right both;
-}
-
-.circle-animation {
-  animation: circle-in-center 5s ease-out forwards;
-}
-
 /* Estilo general del contenedor */
 .about-container {
   display: flex;
@@ -80,54 +50,10 @@ p {
   margin-top: 20px;
 }
 
-/* Estilo para el contenedor del carrusel */
 .carousel-container {
   width: 100vw;
   position: relative;
   margin-left: calc(-50vw + 50%);
-}
-
-/* Estilos para las flechas del carrusel */
-.carousel-control-prev, .carousel-control-next {
-  width: auto; /* Ancho automático para ajustarse al contenido */
-  background: none; /* Elimina el fondo */
-  border: none; /* Elimina el borde */
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-image: none; /* Elimina la imagen predeterminada de fondo */
-  color: gray; /* Color gris para las flechas */
-  font-size: 30px; /* Tamaño de las flechas */
-}
-
-.carousel-control-prev-icon::before {
-  content: '‹'; /* Flecha izquierda */
-}
-
-.carousel-control-next-icon::before {
-  content: '›'; /* Flecha derecha */
-}
-
-.carousel-control-prev, .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.carousel-control-prev {
-  left: 10px; /* Posiciona la flecha izquierda en el extremo */
-}
-
-.carousel-control-next {
-  right: 10px; /* Posiciona la flecha derecha en el extremo */
-}
-
-.carousel-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 
 .certificate-image {
@@ -138,6 +64,29 @@ p {
 }
 
 /* Estilo para la sección de experiencia */
+.vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-content {
+  border-left: 7px solid #2ecc71; /* Borde verde */
+}
+
+.vertical-timeline-element--work:nth-child(2) h3 {
+  color: #2ecc71; /* Título en verde */
+}
+
+.vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-icon {
+  background-color: #2ecc71; /* Fondo de ícono en verde */
+}
+
+.vertical-timeline-element--work:nth-child(3) .vertical-timeline-element-content {
+  border-left: 7px solid #e74c3c; /* Borde rojo */
+}
+
+.vertical-timeline-element--work:nth-child(3) h3 {
+  color: #e74c3c; /* Título en rojo */
+}
+
+.vertical-timeline-element--work:nth-child(3) .vertical-timeline-element-icon {
+  background-color: #e74c3c; /* Fondo de ícono en rojo */
+}
 .experience-section {
   margin-top: 40px;
   width: 100%;
@@ -150,9 +99,6 @@ p {
   color: #333;
 }
 
-/* Estilos diferenciados para cada trabajo */
-
-/* Trabajo en Reparauto Ibarra (naranja) */
 .vertical-timeline-element--work:nth-child(1) .vertical-timeline-element-content {
   border-left: 7px solid #e67e22; /* Borde naranja */
 }
@@ -165,66 +111,74 @@ p {
   background-color: #e67e22; /* Fondo de ícono en naranja */
 }
 
-/* Trabajo en Municipio de Ibarra (verde) */
-.vertical-timeline-element--work:nth-child(2) .vertical-timeline-element-content {
-  border-left: 7px solid #2ecc71; /* Borde verde */
+/* Nueva Sección de Skills */
+.skills-section {
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 10%;
+  text-align: center;
 }
 
-.vertical-timeline-element--work:nth-child(2) h3 {
-  color: #2ecc71; /* Título en verde */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
-.vertical-timeline-element:nth-child(2) .vertical-timeline-element-icon {
-  background-color: #2ecc71; /* Fondo de ícono en verde */
+/* Hacer que en pantallas grandes haya 2 filas con 3 tarjetas por fila */
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+  }
 }
 
-/* Trabajo en Plus Servicios Tecnológicos (rojo) */
-.vertical-timeline-element--work:nth-child(3) .vertical-timeline-element-content {
-  border-left: 7px solid #e74c3c; /* Borde rojo */
+/* Estilo de las tarjetas de skills */
+.skill-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-.vertical-timeline-element--work:nth-child(3) h3 {
-  color: #e74c3c; /* Título en rojo */
+.skill-card:hover {
+  transform: scale(1.15); /* Escala la tarjeta aún más */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta más la sombra para un efecto destacado */
+  z-index: 3; /* Aumenta el z-index para asegurar que sobresalga de las demás tarjetas */
 }
 
-.vertical-timeline-element:nth-child(3) .vertical-timeline-element-icon {
-  background-color: #e74c3c; /* Fondo de ícono en rojo */
+
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.vertical-timeline-element--work p {
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card ul li {
+  font-size: 1rem;
   color: #666;
+  margin-bottom: 10px;
+}
+.skill-image {
+  width: 40px; /* Ajusta el tamaño aquí según tus preferencias */
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-/* --- Responsivo --- */
-@media (max-width: 1024px) {
-  .about-container {
-    flex-direction: column;
-    height: auto;
-    padding: 0 5%;
-  }
 
-  .profile-photo {
-    max-width: 60%;
-  }
-
-  .text-container {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-
-  .certificate-image {
-    width: 80%;
-  }
-}
-
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
@@ -253,4 +207,10 @@ p {
     width: 90%;
     margin-top: 10px;
   }
+
+  /* Ajuste para pantallas pequeñas */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
 }
