@@ -7,6 +7,7 @@ import c2 from '../../assets/images/c2.png';
 import c3 from '../../assets/images/c3.png';
 import c4 from '../../assets/images/c4.png';
 import c5 from '../../assets/images/c5.png';
+import c6 from '../../assets/images/c6.png';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Carousel from 'react-bootstrap/Carousel';
@@ -114,7 +115,13 @@ const AboutMe = () => {
             <Carousel.Item>
               <div className="carousel-slide">
                 <p>English for Developers & IT Professionals - DesafioLatam</p>
-                <img src={c5} alt="Certificado 4" className="certificate-image" />
+                <img src={c5} alt="Certificado 5" className="certificate-image" />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="carousel-slide">
+                <p>La realidad de un Data Scientist: qué hace en su día a día - DesafioLatam</p>
+                <img src={c6} alt="Certificado 6" className="certificate-image" />
               </div>
             </Carousel.Item>
           </Carousel>
