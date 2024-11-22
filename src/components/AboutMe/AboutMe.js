@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import './AboutMe.css';
-import foto from '../../assets/images/foto.png';
+//import foto from '../../assets/images/foto.png';
+import foto1 from '../../assets/images/foto1.png';
 import c1 from '../../assets/images/c1.png';
 import c2 from '../../assets/images/c2.png';
 import c3 from '../../assets/images/c3.png';
@@ -59,12 +60,12 @@ const AboutMe = () => {
       {/* Sección About Me */}
       <div className="about-container">
         <motion.div
-          className="photo-container circle-animation"
+          className="photo-container"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2 }}
         >
-          <img src={foto} alt="Foto" className="profile-photo" />
+          <img src={foto1} alt="Foto1" className="profile-photo" />
         </motion.div>
         <motion.div
           className="text-container"
