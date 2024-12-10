@@ -129,7 +129,7 @@ const AboutMe = () => {
             <Carousel.Item>
               <div className="carousel-slide">
                 <p>Ley de Protección de datos Personales - ProGenios</p>
-                <img src={c6} alt="Certificado 6" className="certificate-image" />
+                <img src={c7} alt="Certificado 7" className="certificate-image" />
               </div>
             </Carousel.Item>
           </Carousel>
