@@ -31,14 +31,36 @@ const Projects = () => {
                     width="100%"
                     height="300"
                     title="Reparauto Ibarra Project Overview Video"
-                    allow="autoplay"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
                 ></iframe>
                 <Card.Body>
                     <Card.Title>Development of the ERP under construction for Reparauto Ibarra</Card.Title>
                     <Card.Text>
-                    It includes modules for vehicle reception, inventory management, and internal process control. Built with AngularJS for the frontend, Node.js for the backend, PostgreSQL as the database, and Docker for container management.                   </Card.Text>
-  
+                        It includes modules for vehicle reception, inventory management, and internal process control. Built with AngularJS for the frontend, Node.js for the backend, PostgreSQL as the database, and Docker for container management.                   </Card.Text>
+
                 </Card.Body>
+            </Card>
+
+            {/* Tercer proyecto con iframe para el video */}
+            <Card className='card'>
+                <iframe
+                    className="card-img-top"
+                    src="https://drive.google.com/file/d/1p81e22Ya2lz9CvgoeNDyWr8rgzYw7C_c/preview"
+                    width="100%"
+                    height="300"
+                    title="Hidro Espejo - App Movil"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                ></iframe>
+
+                <Card.Body>
+                    <Card.Title>Hybrid Mobile Application for Environmental Consultancy</Card.Title>
+                    <Card.Text>
+                        Cross-platform app for Android and iOS developed in React Native. It features dual database usage with SQLite for offline storage and PostgreSQL for central data sync via a Node.js backend. The app enables environmental data collection, stores GPS coordinates, captures and saves photographs, and generates structured PDF reports for field operations.
+                    </Card.Text>
+                </Card.Body>
+
             </Card>
         </div>
     );
